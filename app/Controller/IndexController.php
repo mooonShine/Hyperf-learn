@@ -9,15 +9,15 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace App\Controller;
 
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Annotation\AutoController;
 
 /**
-* @AutoController()
-*/
-
+ * @AutoController()
+ */
 class IndexController extends AbstractController
 {
     public function index()
@@ -33,12 +33,12 @@ class IndexController extends AbstractController
 
     public function multi(RequestInterface $request)
     {
-	    $user = $this->request->input('user', 'zh');
-	    $id = $this->request->input('id', '暂无');
-	$method = $this->request->getMethod();
-	return [
-	   '你访问的方法' => $method,
-	   '信息' => "你好 {$user}.你的id是.{$id}",
-	 ];
+        $user = $this->request->input('user', 'zh');
+        $id = $this->request->input('id', '暂无');
+        $method = $this->request->getMethod();
+        return [
+            '你访问的方法' => $method,
+            '信息' => "你好 {$user}.你的id是.{$id}",
+        ];
     }
 }
