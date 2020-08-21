@@ -10,7 +10,20 @@ declare(strict_types=1);
 use Hyperf\Server\Server;
 use Hyperf\Server\SwooleEvent;
 return [
-    'servers' => [
+	'servers' => [
+		[
+			            'name' => 'http',
+				                'type' => Server::SERVER_HTTP,
+						            'host' => '0.0.0.0',
+							                'port' => 9501,
+									            'sock_type' => SWOOLE_SOCK_TCP,
+										                'callbacks' => [
+													                SwooleEvent::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
+															            ],
+																                'settings' => [
+																			                'open_websocket_protocol' => false,
+																					            ]
+																						            ],
         [
             'name' => 'ws',
             'type' => Server::SERVER_WEBSOCKET,

@@ -93,12 +93,9 @@ class ComposerStaticInitc632b53c3f7d48e1b588351ccdbdce01
             'Laminas\\Stdlib\\' => 15,
             'Laminas\\Mime\\' => 13,
         ),
-        'I' => 
-        array (
-            'Installer\\' => 10,
-        ),
         'H' => 
         array (
+            'Hyperf\\WebSocketServer\\' => 23,
             'Hyperf\\Utils\\' => 13,
             'Hyperf\\Testing\\' => 15,
             'Hyperf\\Server\\' => 14,
@@ -323,9 +320,9 @@ class ComposerStaticInitc632b53c3f7d48e1b588351ccdbdce01
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-mime/src',
         ),
-        'Installer\\' => 
+        'Hyperf\\WebSocketServer\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/installer',
+            0 => __DIR__ . '/..' . '/hyperf/websocket-server/src',
         ),
         'Hyperf\\Utils\\' => 
         array (
