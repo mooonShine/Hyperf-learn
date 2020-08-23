@@ -31,7 +31,8 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
 
     public function onOpen($server, Request $request): void
     {
-        $server->push($request->fd, 'Opened');
+        echo "线程：$request->fd-打开";
+        //$server->push($request->fd, 'Opened');
     }
 
     /**
@@ -69,7 +70,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
 
        // $fdsArr = $this->redis->sMembers('jiayouwa:websocket:voiceSet_'.$uid);
 
-        echo 'voiceSet_'.$uid;
+     //   echo 'voiceSet_'.$uid;
 
         $data = [
             'result' => true,
