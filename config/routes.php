@@ -16,4 +16,6 @@ Router::addRoute(['GET', 'POST', 'HEAD'], '/multi', 'App\Controller\IndexControl
 
 
 //ws服务端路由
-Router::addServer('ws', function () {Router::get('/', 'App\Controller\WebSocketController');});
+Router::addServer('ws', function () {
+    Router::get('/', 'App\Controller\WebSocketController');
+});
